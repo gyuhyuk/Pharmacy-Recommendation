@@ -45,7 +45,11 @@ dependencies {
     testImplementation 'org.spockframework:spock-spring:2.4-M1-groovy-4.0'
 
     // 런타임에 클래스 기반 spock mock을 만들기 위해서 필요
-    testImplementation('net.bytebuddy:byte-buddy:1.12.10')
+    testImplementation 'net.bytebuddy:byte-buddy:1.14.9'
+
+    // testcontainers
+    testImplementation "org.testcontainers:mariadb:1.20.5"
+    testImplementation "org.testcontainers:spock:1.20.5"
 }
 
 tasks.named('test') {
