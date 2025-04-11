@@ -1,16 +1,16 @@
 package com.example.project.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Getter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class DocumentDto {
+
+    @JsonProperty("place_name")
+    private String placeName;
 
     @JsonProperty("address_name") // 도로명 주소
     private String addressName;
@@ -20,4 +20,7 @@ public class DocumentDto {
 
     @JsonProperty("x") // 경도
     private double longitude;
+
+    @JsonProperty("distance")
+    private double distance;
 }
