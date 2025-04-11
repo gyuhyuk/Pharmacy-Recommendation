@@ -36,7 +36,7 @@ public class KakaoAddressSearchService {
 
         if(ObjectUtils.isEmpty(address)) return null; // address가 빈 값이면 null return
 
-        URI uri = kakaoUriBuilderService.buildUrlByAddressSearch(address);
+        URI uri = kakaoUriBuilderService.buildUriByAddressSearch(address);
 
         HttpHeaders headers = new HttpHeaders();
         headers.set(HttpHeaders.AUTHORIZATION, "KakaoAK " + kakaoRestApiKey);
